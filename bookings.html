@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PetPlayZone • Book a Session</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">PetPlayZone</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="bookings.html" class="active">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Book a Session</h1>
+    <p class="lead">Fill your details and confirm your slot. We will contact you shortly.</p>
+
+    <form id="bookingForm" action="thankyou.html" method="get" class="form">
+
+      <label for="ownerName">Your Name</label>
+      <input id="ownerName" name="ownerName" required />
+
+      <label for="phone">Phone Number</label>
+      <input id="phone" name="phone" type="tel" pattern="[0-9]{10}" placeholder="10-digit mobile number" required />
+
+      <label for="petName">Pet's Name</label>
+      <input id="petName" name="petName" required />
+
+      <label for="petType">Type of Pet</label>
+      <select id="petType" name="petType" required>
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="service">Selected Service</label>
+      <input id="service" name="service" readonly placeholder="Auto-filled if you book from Services page" />
+
+      <label for="date">Preferred Date</label>
+      <input id="date" name="date" type="date" required />
+
+      <label for="time">Preferred Time</label>
+      <input id="time" name="time" type="time" required />
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes" rows="3" placeholder="Vaccination status, behaviour notes, etc."></textarea>
+
+      <div class="form-row">
+        <button class="btn" type="submit">Confirm Booking</button>
+        <a class="btn btn-outline" href="services.html">Choose Another Service</a>
+      </div>
+
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© PetPlayZone • Hyderabad</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
